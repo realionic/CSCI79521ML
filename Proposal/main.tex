@@ -1,0 +1,119 @@
+\documentclass[12pt]{main}
+
+\title{
+	CSCI 79511 Project Proposal\\ \vspace{3mm} 
+	\large Detecting microaggression:
+	\\ Exploring potency of goEmotions\cite{goEmotions} and BERT\cite{bert}
+}
+\author{Kyoungwoo Lee}
+\date{\today}
+\pagestyle{empty}
+\begin{document}
+\maketitle
+
+
+%----------------------------------------------------------------------------------------
+
+
+\section*{Project description}
+\\
+Machine learning is fascinating in that it can be trained on the dataset of interest,
+answers many real world problems, and gives insights.
+It helps us find the wisdom and pattern hidden in the haystacks of data.
+This project is about exploring human emotions.
+\vspace{-2mm}\\
+\\
+Even though there are solid amounts of research works in the field of human emotion detection
+from facial images\cite{Facial} or text\cite{AffectiveComputing} datasets.
+You can tell, with fairly high accuracy, what kind of sentimental category a certain facial/textual expression represents.
+Nonetheless,  most of these are based on limited taxonomy\cite{basicemotions} and there isn’t much research
+about detecting subtle human emotions such as microaggressions from the text.
+Detecting subtle yet multifaceted human emotions can also be meaningful work.
+\vspace{-2mm}\\
+\\
+In this project, I am focusing on the ability of a machine learning model that can classify
+the subtlety of sentimental categories. I will expand upon the existing paper,
+which utilizes the BERT-base and BERT-large model to classify human emotions using goEmotions
+that has a total of 30 targets such as admiration, anger, joy, etc.
+The plans to improve the model include hyperparameter tuning such as tweaking learning rates and batch size,
+adopting a different BERT model or other boosting classification models
+to see how it improves or how much faster it is trained depending on the depth of the layers.
+Once a higher F-1 is obtained from hyperparameter tuning with the new model,
+I will use this trained model to do inference on the second dataset that’s obtained from microaggressions.com.
+After observing how the model predicts the emotions that represent the microaggression dataset,
+I will re-train the model with the dataset that include both GoEmotions and microaggression dataset,
+to perform the binary classification to detect the microaggression from the text.  
+\vspace{-2mm}\\
+\\
+There are two major obstacles in detecting micro sentiments.
+Insufficient labeled data is one problem that also applies to the general emotional classifiers
+since labeling sentimental categories is not a mechanical type of task.
+There were attempts\cite{AffectiveText}\cite{Mohammad2018-gv} to overcome this issue,
+but they had a small dataset or lacked detailed classifications.
+Another issue arises from its nature of being indistinctive.
+Micro emotions are highly context dependant and are likely to be subjective.
+Generic algorithms that are built upon the lexical structure are not suitable for identifying micro emotions.
+\vspace{-2mm}\\
+\\
+For demo, I will create visualizations on hyperparameter tunings on learning rates and batchsize,
+as well as how precision and recall change depending on the probability threshold as we’ve learned from the class. 
+
+
+\section*{Dataset}
+\\
+GoEmotions\cite{goEmotions} is a dataset of a rather comprehensive set of 28 sentimental categories.
+It presents around 58K text instances of manually labeled reddit comments.
+This will be the major key to addressing the first issue of data deficiency.
+Other than hyperparameter tuning, this project will take advantage of a tool NLPAug\cite{ma2019nlpaug}
+to administer the data imbalance issue in GoEmotions.
+There is also a web service called microaggressions.com\cite{Co_undated-sh}
+that incorporates more than 3K posts that are explicitly reported for being micro aggression.
+This will be the test dataset in the first phase of model building
+and be included in the training dataset of the second experiment.
+\vspace{-2mm}\\
+
+
+\section*{Model}
+\\
+Bert\cite{bert} is a language model built upon training the BooksCorpus(800M words) and English Wikipedia(2,500M words).
+It can infer contextual connotations between words with which subtleties of micro emotions might be captured.
+GoEmotions team selected the BERT-base model with sigmoid cross entropy loss function.
+With limits in computation capacity, experiments will incorporate from smallest BERT model(-tiny)
+to gradually large model depend on how it performs and how commodity machine can handle.
+\vspace{-2mm}\\
+\\
+
+
+\section*{Evaluation}
+\\
+The models will be scored by F1 matric, in the first phase it will measure the F1 score
+on the test dataset of GoEmotions. After building a suitable model,
+labeling microaggression data upon the model to see if standardized labels turn out.
+If the model yields stable combinations of annotations, I will tweak this model into a binary classifier
+that can tell the microaggressions in the text.
+In case this trained model does not produce valid labels,
+building a new model with microaggressons.com data will be the second phase of this project,
+and analyzing this model with F1 score will follow after.
+
+
+\section*{Timeline}
+\\
+\begin{enumerate}[label={}]
+	\item \hspace{-10mm}\texttt{2021-10-05:} Select project topic
+	\item \hspace{-10mm}\texttt{2021-10-12:} \textbf{Topic presentation}
+	\item \hspace{-10mm}\texttt{2021-10-19:} \textbf{Proposal due} Aggregate datasets from microaggressions.com
+	\item \hspace{-10mm}\texttt{2021-10-26:} Begin testing \& training BERT on GoEmotions dataset
+	\item \hspace{-10mm}\texttt{2021-11-02:} \textbf{Midterm Exam}
+	\item \hspace{-10mm}\texttt{2021-11-09:} Fine tune model based on GoEmotions dataset
+	\item \hspace{-10mm}\texttt{2021-11-16:} Analyse model score and test microaggression
+	\item \hspace{-10mm}\texttt{2021-11-23:} Start training model detecting microaggression
+	\item \hspace{-10mm}\texttt{2021-11-30:} Fine tune model detecting microaggression
+	\item \hspace{-10mm}\texttt{2021-12-07:} Analyse model and author report
+	\item \hspace{-10mm}\texttt{2021-12-15:} Final presentation
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{acm}
+\bibliography{main}
+\end{document}
