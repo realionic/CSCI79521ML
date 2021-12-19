@@ -22,8 +22,11 @@ All models are trained on a single v100 GPU
 ## Result
 | Model | pre-training data | fine-tuninig data | F1 Score | 
 | - | - | - | -|
+| Demszky et al.* | - | goEmotions | 0.46 | 
 | bert-base-uncased | - | goEmotions | 0.613 |
 | bert-base-cased | - | goEmotions | 0.608 |
+| bert-base-cased | toxicity | goEmotions | - |
 | bert-base-cased | - | toxicity | 0.934 |
 | bert-base-cased | goEmotions | toxicity | - |
-| bert-base-cased | toxicity | goEmotions | - |
+
+\* Demszky, Dorottya et al. “GoEmotions: A Dataset of Fine-Grained Emotions.” ArXiv abs/2005.00547 (2020)
