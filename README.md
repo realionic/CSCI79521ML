@@ -25,7 +25,7 @@ All models are trained on a single v100 GPU
 | Demszky et al.* | - | goEmotions | 0.46 | 
 | bert-base-uncased | - | goEmotions | 0.613 |
 | bert-base-cased | - | goEmotions | 0.608 |
-| bert-base-cased | toxicity | goEmotions | - |
+| bert-base-cased | toxicity | goEmotions | 0.607 |
 | bert-base-cased | - | toxicity | 0.934 |
 | bert-base-cased | goEmotions | toxicity | 0.933 |
 
