@@ -11,10 +11,10 @@ batch size: 32 \
 All models are trained on a single v100 GPU
 
 ## Data
-- goEmotions
+- goEmotions [paper](https://arxiv.org/abs/2005.00547).
   - This dataset contains 28 labels - amusement, admiration, anger, neutral, etc.
   - Dataset size: train(36,308), validation(4,548), test(4,590) 
-- Toxicity
+- Toxicity [dataset](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge).
   - Originally the dataset is multi-labelled with six labels (toxic, severe_toxic, obscene, neutral, etc.). However, to make the task simpler, the task is conducted as a uni-labelled, binary classification with only the labels that contain "toxic" are used to represent the toxicity.
   - This dataset didn't come with validation, so 20% of train set was used as a validation set.
   - Dataset size: train(126,913), validation(31,728), test(63,826) 
