@@ -23,9 +23,9 @@ All models are trained on a single v100 GPU
 - pytorch, numpy, pandas, sklearn, transformers, tqdm, sys
 
 ## Run
-- To train the model first you have to change data_path (where your data is located) and save_path (where you want your log and model to be saved) within goemotions.py and toxicity.py\\
+- To train the model first you have to change data_path (where your data is located) and save_path (where you want your log and model to be saved) within goemotions.py and toxicity.py \
 `python goemotions.py` or `python toxicity.py`
-- To test the trained model, you need to pass an argument <model_path> where the model directory where your trained model checkpoint is stored.
+- To test the trained model, you need to pass an argument <model_path> where the model directory where your trained model checkpoint is stored. \
 `python goemotions_test.py <model_path>` or `python toxicity_test.py <model_path>`
 
 ## Result
