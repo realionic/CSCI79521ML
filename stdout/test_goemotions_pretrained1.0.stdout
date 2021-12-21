@@ -1,0 +1,128 @@
+test f1 value is 0.6068680749878921
+Class: admiration
+Accuracy: 253/348
+
+Class: amusement
+Accuracy: 166/186
+
+Class: anger
+Accuracy: 71/131
+
+Class: annoyance
+Accuracy: 36/194
+
+Class: approval
+Accuracy: 86/236
+
+Class: caring
+Accuracy: 32/86
+
+Class: confusion
+Accuracy: 37/97
+
+Class: curiosity
+Accuracy: 102/176
+
+Class: desire
+Accuracy: 19/56
+
+Class: disappointment
+Accuracy: 19/88
+
+Class: disapproval
+Accuracy: 91/195
+
+Class: disgust
+Accuracy: 37/76
+
+Class: embarrassment
+Accuracy: 10/23
+
+Class: excitement
+Accuracy: 21/57
+
+Class: fear
+Accuracy: 50/65
+
+Class: gratitude
+Accuracy: 237/260
+
+Class: grief
+Accuracy: 0/2
+
+Class: joy
+Accuracy: 58/93
+
+Class: love
+Accuracy: 144/160
+
+Class: nervousness
+Accuracy: 1/12
+
+Class: optimism
+Accuracy: 60/107
+
+Class: pride
+Accuracy: 0/7
+
+Class: realization
+Accuracy: 6/89
+
+Class: relief
+Accuracy: 0/7
+
+Class: remorse
+Accuracy: 35/44
+
+Class: sadness
+Accuracy: 56/102
+
+Class: surprise
+Accuracy: 44/87
+
+Class: neutral
+Accuracy: 1193/1606
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc416.pok.ibm.com>
+Subject: Job 4016067: <test_goemotions_pretrained1.0> in cluster <cccCluster> Done
+
+Job <test_goemotions_pretrained1.0> was submitted from host <cccxl009.pok.ibm.com> by user <hyunjung> in cluster <cccCluster> at Sun Dec 19 21:50:45 2021
+Job was executed on host(s) <5*cccxc416.pok.ibm.com>, in queue <x86_24h>, as user <hyunjung> in cluster <cccCluster> at Sun Dec 19 21:50:46 2021
+</u/hyunjung> was used as the home directory.
+</speech7/saon6/dani/hyunjung/goemotions> was used as the working directory.
+Started at Sun Dec 19 21:50:46 2021
+Terminated at Sun Dec 19 21:52:42 2021
+Results reported at Sun Dec 19 21:52:42 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/speech7/saon6/dani/hyunjung/goemotions/sdir/test_goemotions_pretrained1.0.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   478.43 sec.
+    Max Memory :                                 1945 MB
+    Average Memory :                             1455.50 MB
+    Total Requested Memory :                     67840.00 MB
+    Delta Memory :                               65895.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                13
+    Run time :                                   119 sec.
+    Turnaround time :                            117 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </speech7/saon6/dani/hyunjung/goemotions/ldir/test_goemotions_pretrained1.0.stderr> for stderr output of this job.
+
